@@ -1,0 +1,272 @@
+<html>
+<!-- Started 3pm 25th -->
+<head>
+<LINK REL=StyleSheet HREF="ps/stylesheets/screen.css" TYPE="text/css" >
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".startItem").hide();
+		$(".photoPair").hide();
+		$(".startItem:first").show();
+
+		$(".scrollPage").click(function(){
+			var nextElement = $(this).parent('.startItem').next();
+			$(this).parent('.startItem').hide(200)
+			$(nextElement).show();
+		})
+		//One more div down in hierarchy from parent startItem
+		$('#agreeButton').click(function() {
+		   var nextElement = $(this).parent().parent('.startItem').next();
+		   $(this).parent().parent('.startItem').hide(200)
+		   $(nextElement).show();
+		});
+		var startTest = function (){
+			$("#startContainer").hide()
+			$(".photoPair").show(200);
+		}
+		$(".startTest").click(startTest)
+		
+		// $('.oldScrollPage').click(function() {
+		//    var nextElement = $(this).parent('.startItem').next();
+		//    var destination = $(nextElement).offset().top+ $(this).offset().top - $(".startItem:first").offset().top;
+		//    alert(destination)
+		//    // $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination-20}, 500 );
+		//    $("#startContainer").animate({ scrollTop: destination-180}, 500 );
+		//    return false;
+		// });
+	});
+function Person (name, img) {
+    this.pname = name;
+    this.img = imgFullPath(img);
+    // this.getInfo = getAppleInfo;
+}
+//Get Info Method
+Person.prototype.getInfo = function() {
+    return this.pname + ' ' + this.img;
+};
+// Function to get full path of images
+var imgFullPath = function(img){
+	var path = 'resources/im/'
+	return path+img
+}
+
+var p1 = new Person('Colin','colin-farrell.jpg')
+console.log(p1.getInfo())
+
+$(document).ready(function(){
+	pairs = [{
+		'name':'Colin',
+		'img': 'colin-farrell.jpg'
+	},{
+		'name':'Reese',
+		'img': 'reese-witherspoon.jpg'
+	},{
+		'name':'Christopher',
+		'img': 'walkin.jpg'
+	}]
+	//	pairs = [new Person('Colin','colin-farrell.jpg'), new Person('Reese','reese-witherspoon.jpg'),new Person('Christopher','walkin.jpg')]
+	//var random array sort,allows call of shuffle on arrays to make complete random order
+	//Why does this remove all properties?
+	Array.prototype.shuffle = function() {
+		console.log("shuffle called")
+		var s = [];
+		while (this.length) s.push(this.splice(Math.random() * this.length, 1));
+		while (s.length) this.push(s.pop());
+		return this;
+	}
+	console.log(pairs[0]);
+	pairs.shuffle.call(pairs)	
+	console.log(pairs[0])
+
+	num = [1,2,3,4,5,6]
+	num.shuffle()
+	console.log(num)
+	
+	// Function to get full path of images
+	var imgFullPath = function(img){
+		var path = 'resources/im/'
+		return path+img
+	}
+	// console.log(imgFullPath(pairs[0].img))
+	
+	// Updates image to desired index of peopel
+	var updateStudyImage= function(people, index){
+		$(".photoPair").fadeOut(200,function(){	
+			$(".imgSrc").attr('src',imgFullPath(people[index].img))
+			$(".photoName").html(people[index].pname)
+		})
+		$(".empty").fadeOut(500);//For blank screen in between
+		$(".empty").fadeIn(1, function(){
+			$(".photoPair").fadeIn(200,function(){
+			})
+		})
+	
+	}
+	// Sets up loop variables for study
+	var setupStudy = function(start, stop,timer)
+	{
+		startStudy = start
+		stopStudy = stop
+		inter = setInterval(showImage, timer);
+	}
+
+	//shows Images on Timer
+	var showImage = function()
+	{	
+		updateStudyImage(pairs,startStudy)
+		console.log(startStudy++)
+		if (startStudy == stopStudy){
+			clearInterval(inter)
+		}
+	}
+	setupStudy(1,3,4000)
+})	
+
+</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+	
+		</div>
+		<div id="main">
+			<div id="spacer">
+			</div>
+			<div id="startContainer">
+				<!-- LANDING SCREEN -->
+				<div class="startItem" id="start">
+					<h1>
+						Good with names and faces?
+					</h1>
+					<h2>
+						A study to investigate face-name memory IQ
+					</h2>
+					<div class="startItemMain">
+						<div class="startItemInner">
+							<img class="" src="resources/im/start/people.png"/>
+						</div>
+						<div class="startItemInner">
+							<p>
+								We often experience trouble remembering the
+name of a person we have previously met despite
+recognizing their face as being familiar.
+							</p>
+							<p>
+								A person's ability to successfully recall names to
+the faces of people they have recently met can be
+termed face-name memory IQ.
+							</p>
+							<p>
+								If you would like to test your face-name memory
+IQ, please hit 'Continue' to proceed to our
+experiment.
+							</p>
+						</div>
+					</div>
+					<div class="startNextButton scrollPage">
+						Continue
+					</div>
+				</div>
+				<!-- INFO SCREEN -->
+				<div class="startItem" id="info">
+					<h1>
+						Face-Name Memory IQ Project
+					</h1>
+					<h2>
+						Washington University in St. Louis
+					</h2>
+					<div class="startItemMain">
+						<div class="startItemInner">
+							<img class="" src="resources/im/start/head.png"/>
+						</div>
+						<div class="startItemInner">
+							<p>
+								You will be asked to complete two parts of the study and provide some anonymous information.
+							</p>
+							<p>
+								At the end you will receive a Memory Face-Name IQ, which reflects how well you did compared to everyone else who has completed the experiment.
+							</p>
+							<p>
+								Additionally, you will have the opportunity to be tested on some of the face-name pairs tomorrow to receive a measure of your long- term face-name memory IQ
+							</p>
+							<p>
+								The study has been approved by the Washington University Psychology Research Ethics Committee, and only takes 10 to 15 minutes to complete.
+							</p>
+						</div>
+					</div>
+					<div class="startNextButton scrollPage">
+						Next
+					</div>
+				</div>
+				<!--  CONSENT FORM-->
+				<div class="startItem">
+					<h1>
+						Consent Request
+					</h1>
+					<h2>
+						In order to use your anonymous data in our research, we need your consent to the following points:
+					</h2>
+					<div class="startItemMain">
+						<!-- <div class="startItemInner">
+							<img class="" src="resources/im/start/head.png"/>
+						</div> -->
+						<div class="startItemInner">
+							<p>
+								1.)  I understand that my participation in this study is voluntary and that I am free to withdraw at any time, without giving any reason.
+							</p>
+							<p>
+								2.)  I agree that the data provided will be stored anonymously and included in a Washington University Cognitive Psychology Laboratory study
+							</p>
+						</div>
+					</div>
+					<div id="agree">
+						<p>
+							Click 'I agree' to indicate your consent and start the experiment.
+						</P>
+						<div id="agreeButton" class="">
+							I Agree
+						</div>
+					</div>
+				</div>
+				<!-- PART 1 START -->
+				<div class="startItem">
+					<h1>
+						Face-Name Memory IQ Study: Part 1
+					</h1>
+					<h2>
+						Study Phase
+					</h2>
+					<div class="startItemMain">
+						<div class="startItemInner">
+							<img class="" src="resources/im/start/samplePerson.png"/>
+						</div>
+						<div class="startItemInner">
+							<p>
+								A picture of a face will appear in the center of the screen paired with its corresponding name, as shown in the diagram. 
+							</p>
+							<p>
+								You will be given 4 seconds to learn the name associated with the face before you will proceed to the next face-name pair. You will learn the faces and names of 48 individuals.
+							</p>
+							<p>
+								Your task is to learn the items so that you can recall the correct name for an individual when prompted with their face later in the experiment.
+							</p>
+						</div>
+					</div>
+					<div class="startNextButton startTest">
+						Next
+					</div>
+				</div>
+			</div>
+			<div class="photoPair">
+				<div class="empty"></div>
+				<div class="photoBorder">
+					<img class="imgSrc" src="">
+				</div>
+				<div class="photoName">Colin Farrell </div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
+	

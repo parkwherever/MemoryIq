@@ -1,0 +1,172 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3/gradient";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+
+$bright-blue:#0088ee;
+$dark-blue:#004488;
+$light-blue:#ccddff;
+$orange:#ffaa66;
+$black:#362A2F;
+
+$mainWidth:800px;
+$innerWidth:$mainWidth/2 - 40px;
+
+$bigFont:2.7em;
+$mediumFont:1.5em;
+
+@mixin crazy(){
+    @include border-radius(10px 10px 10px 10px, 2px 4px 6px 8px)
+}
+.label{
+    font-family:"Times New Roman", Times, serif;
+}
+.button {
+    width:250px;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font: 24px/100% Arial, Helvetica, sans-serif;
+    padding: .5em 2em .55em;
+    text-shadow: 0 5px 5px rgba(0,0,0,.3);
+    -webkit-border-radius: .5em; 
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    -webkit-box-shadow: 0 7px 7px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 7px 7px rgba(0,0,0,.2);
+    box-shadow: 0 7px 7px rgba(0,0,0,.2);
+}
+@mixin border($color,$width,$style){
+    border: {
+       color: $color;
+       width: $width;
+       style: solid;
+  }
+}
+.hor {
+    position: relative;
+    border:solid red 1px;
+    display: inline-block;
+    height: 90;
+    width: 200px;
+}
+body{
+    font-family: Arial, "MS Trebuchet", sans-serif;
+}
+h1{
+    font-size:$bigFont;
+    /*font-weight:bold;*/
+    color:$dark-blue;
+    margin:8px;
+}
+h2{
+    margin:8px;
+    font-size:$mediumFont;
+     color:$dark-blue;
+}
+
+/*Intro Instructions*/
+#startContainer{
+    height:440px;
+    overflow: hidden;
+}
+.startItemMain{
+    /*@extend .hor;*/
+    border-top: $dark-blue solid  3px;
+    /*border:solid blue 2px;*/
+    width:$mainWidth - 20px ;
+    margin:10px;
+}
+.startItemInner{
+    position: relative;
+    /*width:$innerWidth;*/
+    display: inline;
+    float:left;
+    margin:10px;
+}
+.startItemInner p{
+    width: 420px;
+    /*color:$dark-blue;*/
+    font-weight: bold;
+    margin-bottom:15px;
+}
+.startNextButton{
+    @extend .button;
+    width:100px;
+    color: $bright-blue;
+    background-color: $light-blue;
+    float:right;
+    margin-right:20px;
+}
+.startItem{
+    clear:both;
+    height:440px;
+}
+#agree{
+    position: relative;
+    clear:both;
+    font-weight: bold;
+    width:$mainWidth - 40px;
+    left:20px;
+}
+#agreeButton{
+    @extend .button;
+    float:right;
+    position: relative;
+    top:-46px;
+    width:100px;
+    color: $bright-blue;
+    background-color: $light-blue;
+
+}
+
+/*End Intro Instructions*/
+#wrapper{
+  
+}
+#header{
+    z-index:40;
+    position:relative;
+/*      @include crazy();*/
+    @include border-bottom-radius(10);
+    margin: 0px auto;
+    height:100px;
+    width:1000px;
+    @include box-shadow(black 2px 2px 10px); 
+    @include background-image(linear-gradient($bright-blue, $dark-blue))
+}
+#main{
+    z-index:1;
+    position:relative;
+    top:-20px;
+    margin: 0px auto;
+    height:600px;
+    width:$mainWidth;
+    @include border($light-blue,3px,ridge);
+/*    border-bottom:none;*/
+}
+#spacer{
+    height:100px;
+}
+.photoPair{
+    text-align:center;
+}
+.photoBorder img{
+    height:300px;
+    @include border($light-blue,2px,groove);   
+}
+.photoName{
+    position:relative;
+    margin-top:20px;
+    @extend .label;
+    font-size:3.5em;
+}
+
+
