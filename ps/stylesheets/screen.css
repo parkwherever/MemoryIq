@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,56 +24,61 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 20, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 20, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 body {
   line-height: 1;
 }
 
-/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 26, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 28, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 101, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 101, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 30, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 114, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 114, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
-/* line 26, ../sass/screen.scss */
+/* line 27, ../sass/screen.scss */
 .label, .photoName {
   font-family: "Times New Roman", Times, serif;
 }
 
-/* line 29, ../sass/screen.scss */
-.button, .startNextButton, #agreeButton {
+/* line 30, ../sass/screen.scss */
+.center {
+  text-align: center;
+}
+
+/* line 33, ../sass/screen.scss */
+.button, .startNextButton, #agreeButton, .quizBtn {
   width: 250px;
   display: inline-block;
   outline: none;
@@ -91,7 +96,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   box-shadow: 0 7px 7px rgba(0, 0, 0, 0.2);
 }
 
-/* line 53, ../sass/screen.scss */
+/* line 57, ../sass/screen.scss */
 .hor {
   position: relative;
   border: solid red 1px;
@@ -100,12 +105,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 200px;
 }
 
-/* line 60, ../sass/screen.scss */
+/* line 64, ../sass/screen.scss */
 body {
   font-family: Arial, "MS Trebuchet", sans-serif;
 }
 
-/* line 63, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 h1 {
   font-size: 2.7em;
   /*font-weight:bold;*/
@@ -113,21 +118,26 @@ h1 {
   margin: 8px;
 }
 
-/* line 69, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 h2 {
   margin: 8px;
   font-size: 1.5em;
   color: #004488;
 }
 
+/* line 78, ../sass/screen.scss */
+i {
+  font-style: italic;
+}
+
 /*Intro Instructions*/
-/* line 76, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 #startContainer {
-  height: 440px;
+  height: 500px;
   overflow: hidden;
 }
 
-/* line 80, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 .startItemMain {
   /*@extend .hor;*/
   border-top: #004488 solid 3px;
@@ -136,7 +146,7 @@ h2 {
   margin: 10px;
 }
 
-/* line 87, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 .startItemInner {
   position: relative;
   /*width:$innerWidth;*/
@@ -145,7 +155,7 @@ h2 {
   margin: 10px;
 }
 
-/* line 94, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 .startItemInner p {
   width: 420px;
   /*color:$dark-blue;*/
@@ -153,22 +163,49 @@ h2 {
   margin-bottom: 15px;
 }
 
-/* line 100, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
+#consentR {
+  width: 780px;
+}
+/* line 109, ../sass/screen.scss */
+#consentR p {
+  font-size: .9em;
+  width: 780px;
+}
+
+/* line 114, ../sass/screen.scss */
 .startNextButton {
   width: 100px;
   color: #0088ee;
   background-color: #ccddff;
   float: right;
+  position: relative;
+  top: 10px;
   margin-right: 20px;
 }
 
-/* line 108, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
+b {
+  font-weight: bold;
+}
+
+/* line 127, ../sass/screen.scss */
+.startItemInner ul {
+  margin: 15px;
+}
+
+/* line 130, ../sass/screen.scss */
+.startNextButton:hover {
+  background-color: #e3ecff;
+}
+
+/* line 133, ../sass/screen.scss */
 .startItem {
   clear: both;
   height: 440px;
 }
 
-/* line 112, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 #agree {
   position: relative;
   clear: both;
@@ -177,7 +214,7 @@ h2 {
   left: 20px;
 }
 
-/* line 119, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 #agreeButton {
   float: right;
   position: relative;
@@ -188,7 +225,30 @@ h2 {
 }
 
 /*End Intro Instructions*/
-/* line 134, ../sass/screen.scss */
+/*Start Test Buttons*/
+/* line 156, ../sass/screen.scss */
+#testPanel {
+  text-align: center;
+  position: relative;
+  top: 5px;
+}
+
+/* line 161, ../sass/screen.scss */
+.quizBtn {
+  margin: 15px;
+  width: 100px;
+  color: #0088ee;
+  background-color: #ccddff;
+  display: inline-block;
+}
+
+/* line 169, ../sass/screen.scss */
+.quizBtn:hover {
+  background-color: #e3ecff;
+}
+
+/*End Test Buttons*/
+/* line 176, ../sass/screen.scss */
 #header {
   z-index: 40;
   position: relative;
@@ -220,7 +280,7 @@ h2 {
   background-image: linear-gradient(#0088ee, #004488);
 }
 
-/* line 145, ../sass/screen.scss */
+/* line 187, ../sass/screen.scss */
 #main {
   z-index: 1;
   position: relative;
@@ -234,17 +294,22 @@ h2 {
   /*    border-bottom:none;*/
 }
 
-/* line 155, ../sass/screen.scss */
+/* line 197, ../sass/screen.scss */
+.photoPairWrapper {
+  height: 400px;
+}
+
+/* line 200, ../sass/screen.scss */
 #spacer {
   height: 100px;
 }
 
-/* line 158, ../sass/screen.scss */
+/* line 203, ../sass/screen.scss */
 .photoPair {
   text-align: center;
 }
 
-/* line 161, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 .photoBorder img {
   height: 300px;
   border-color: #ccddff;
@@ -252,9 +317,58 @@ h2 {
   border-style: solid;
 }
 
-/* line 165, ../sass/screen.scss */
+/* line 210, ../sass/screen.scss */
 .photoName {
   position: relative;
   margin-top: 20px;
   font-size: 3.5em;
+}
+
+/* line 216, ../sass/screen.scss */
+#btnWrapper {
+  width: 670px;
+  height: 50px;
+  top: -10px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 224, ../sass/screen.scss */
+.btnPair {
+  width: 200px;
+  font-size: 20px;
+}
+
+/* line 228, ../sass/screen.scss */
+#emailField {
+  font-size: 1.2em;
+  height: 40px;
+  width: 200px;
+}
+
+/* line 233, ../sass/screen.scss */
+#submitEmail {
+  top: -40px;
+  font-size: 1.2em;
+}
+
+/* line 237, ../sass/screen.scss */
+.spacedFont {
+  line-height: 20px;
+}
+
+/* line 240, ../sass/screen.scss */
+#goToResults {
+  width: 300px;
+}
+
+/* line 243, ../sass/screen.scss */
+.wideBtn {
+  width: 300px;
+}
+
+/* line 246, ../sass/screen.scss */
+red {
+  color: red;
 }

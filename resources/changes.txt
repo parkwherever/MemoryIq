@@ -1,0 +1,41 @@
+Wash U Psych department header. hide during text
+
+Demographics:
+	countries: main english countries at top, china, japan, and continents
+	age: limit to 2 digits: categories: up through 85 ++ 
+	edu: no high school, full list of edu options as given by sat
+
+
+Need From Mary:
+	Need total list of people names
+
+
+Logging:
+	Which List 1 - 5
+	Each:
+		Name (id num), correct, answer.  How Long til each question answered , user id
+	Percent hit rate:
+		Of the old shown on test, how many correctly answered.
+		Of the new shown on test, how many correctly answered.  
+
+Running Tab of Distribution of Performance:
+	sample mean = Performance: hits - false alarm
+	stdev:
+		[sum(sample mean - subj mean)^2] /total num over all subjects
+		add or subtract std * 16 from 100
+
+	Display this number as IQ score.
+
+	You performed better than ___ people.  rank all scores in ordered list, get position in list, and show percent.
+
+
+Send email with timestamp and list number:
+	- thus record time passed since.
+
+	Send extra reminder after additional day.
+
+	AFter this, allow and record data, but don't put in sample mean.
+
+	Show stdev for day 2, different than day 1.
+
+Daily update.  subject Id.  hits, false alarms, whether they want to be contacted

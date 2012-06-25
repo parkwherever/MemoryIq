@@ -1,0 +1,1072 @@
+{
+    "Day 1: STUDY PHASE": [
+        {
+            "name": "Gerry Walker",
+            "abbr": "BD"
+        },
+        {
+            "name": "Cassidy Thornton",
+            "abbr": "BF"
+        },
+        {
+            "name": "Madison Phillips",
+            "abbr": "BM"
+        },
+        {
+            "name": "Lee Carter",
+            "abbr": "W"
+        },
+        {
+            "name": "Julia Keller",
+            "abbr": "BS"
+        },
+        {
+            "name": "Sasha Goldstein",
+            "abbr": "BK"
+        },
+        {
+            "name": "Meridith Townsend",
+            "abbr": "BN"
+        },
+        {
+            "name": "Jessie Foster",
+            "abbr": "V"
+        },
+        {
+            "name": "Dakota Edwards",
+            "abbr": "U"
+        },
+        {
+            "name": "Shawn Mitchell",
+            "abbr": "BP"
+        },
+        {
+            "name": "Jamie Harrison",
+            "abbr": "J"
+        },
+        {
+            "name": "Reese Johnson",
+            "abbr": "K"
+        },
+        {
+            "name": "Alex Atkins",
+            "abbr": "L"
+        },
+        {
+            "name": "Morgan Greenwood",
+            "abbr": "C"
+        },
+        {
+            "name": "Quinn Armstrong",
+            "abbr": "G"
+        },
+        {
+            "name": "Greg Jennings",
+            "abbr": "H"
+        },
+        {
+            "name": "Emily Boyd",
+            "abbr": "CO"
+        },
+        {
+            "name": "Sarah Owens",
+            "abbr": "CI"
+        },
+        {
+            "name": "Tiffany Horton",
+            "abbr": "CP"
+        },
+        {
+            "name": "Elizabeth Simpson",
+            "abbr": "CJ"
+        },
+        {
+            "name": "Megan Stone",
+            "abbr": "CQ"
+        },
+        {
+            "name": "Alice Creed",
+            "abbr": "CK"
+        },
+        {
+            "name": "Peter Bell",
+            "abbr": "CD"
+        },
+        {
+            "name": "William Jenkins",
+            "abbr": "BV"
+        },
+        {
+            "name": "Patrick Schwartz",
+            "abbr": "CE"
+        },
+        {
+            "name": "Robert Powell",
+            "abbr": "BW"
+        },
+        {
+            "name": "Andrew Cohen",
+            "abbr": "CR"
+        },
+        {
+            "name": "Paul Marshall",
+            "abbr": "BY"
+        },
+        {
+            "name": "Erin Craig",
+            "abbr": "DU"
+        },
+        {
+            "name": "Elyse Dawson",
+            "abbr": "EJ"
+        },
+        {
+            "name": "Emma Tucker",
+            "abbr": "CS"
+        },
+        {
+            "name": "Olivia Wells",
+            "abbr": "CT"
+        },
+        {
+            "name": "Sophie Mason",
+            "abbr": "CU"
+        },
+        {
+            "name": "Chloe Dixon",
+            "abbr": "CV"
+        },
+        {
+            "name": "Hannah Holmes",
+            "abbr": "CW"
+        },
+        {
+            "name": "Jacob Moore",
+            "abbr": "DA"
+        },
+        {
+            "name": "Ethan White",
+            "abbr": "DB"
+        },
+        {
+            "name": "Daniel Garcia",
+            "abbr": "DC"
+        },
+        {
+            "name": "Anthony Young",
+            "abbr": "DD"
+        },
+        {
+            "name": "Matthew King",
+            "abbr": "DE"
+        },
+        {
+            "name": "Jason Baker",
+            "abbr": "DF"
+        },
+        {
+            "name": "Kyle Nelson",
+            "abbr": "DG"
+        },
+        {
+            "name": "Jordan Irwin",
+            "abbr": "B"
+        },
+        {
+            "name": "Taylor Hamilton",
+            "abbr": "D"
+        },
+        {
+            "name": "Chris Irving",
+            "abbr": "F"
+        },
+        {
+            "name": "Sam Anderson",
+            "abbr": "Y"
+        },
+        {
+            "name": "Robin Jackson",
+            "abbr": "E"
+        },
+        {
+            "name": "Ali Ferguson",
+            "abbr": "I"
+        },
+        {
+            "name": "Charlie Henderson",
+            "abbr": "BT"
+        },
+        {
+            "name": "Jonah Newton",
+            "abbr": "BJ"
+        },
+        {
+            "name": "Brett Roberts",
+            "abbr": "BI"
+        },
+        {
+            "name": "Aubrey Reynolds",
+            "abbr": "BQ"
+        },
+        {
+            "name": "Logan Greenberg",
+            "abbr": "M"
+        },
+        {
+            "name": "Ricki Jones",
+            "abbr": "BL"
+        },
+        {
+            "name": "Bobby Lynch",
+            "abbr": "BR"
+        },
+        {
+            "name": "Kerry Lewis",
+            "abbr": "AX"
+        }
+    ],
+    "Day 1: TEST PHASE": [
+        {
+            "name": "Gerry Walker",
+            "abbr": "BD",
+            "testType": "old"
+        },
+        {
+            "name": "Cassidy Thornton",
+            "abbr": "BF",
+            "testType": "old"
+        },
+        {
+            "name": "Madison Phillips",
+            "abbr": "BM",
+            "testType": "old"
+        },
+        {
+            "name": "Lee Carter",
+            "abbr": "W",
+            "testType": "old"
+        },
+        {
+            "name": "Julia Keller",
+            "abbr": "BS",
+            "testType": "old"
+        },
+        {
+            "name": "Sasha Goldstein",
+            "abbr": "BK",
+            "testType": "old"
+        },
+        {
+            "name": "Meridith Townsend",
+            "abbr": "BN",
+            "testType": "old"
+        },
+        {
+            "name": "Jessie Foster",
+            "abbr": "V",
+            "testType": "old"
+        },
+        {
+            "name": "Dakota Edwards",
+            "abbr": "U",
+            "testType": "old"
+        },
+        {
+            "name": "Shawn Mitchell",
+            "abbr": "BP",
+            "testType": "old"
+        },
+        {
+            "name": "Jamie Harrison",
+            "abbr": "J",
+            "testType": "old"
+        },
+        {
+            "name": "Reese Johnson",
+            "abbr": "K",
+            "testType": "old"
+        },
+        {
+            "name": "Alex Atkins",
+            "abbr": "L",
+            "testType": "old"
+        },
+        {
+            "name": "Morgan Greenwood",
+            "abbr": "C",
+            "testType": "old"
+        },
+        {
+            "name": "Quinn Armstrong",
+            "abbr": "G",
+            "testType": "old"
+        },
+        {
+            "name": "Greg Jennings",
+            "abbr": "H",
+            "testType": "old"
+        },
+        {
+            "name": "Emily Boyd",
+            "abbr": "CO",
+            "testType": "old"
+        },
+        {
+            "name": "Sarah Owens",
+            "abbr": "CI",
+            "testType": "old"
+        },
+        {
+            "name": "Tiffany Horton",
+            "abbr": "CP",
+            "testType": "old"
+        },
+        {
+            "name": "Elizabeth Simpson",
+            "abbr": "CJ",
+            "testType": "old"
+        },
+        {
+            "name": "Megan Stone",
+            "abbr": "CQ",
+            "testType": "old"
+        },
+        {
+            "name": "Alice Creed",
+            "abbr": "CK",
+            "testType": "old"
+        },
+        {
+            "name": "Peter Bell",
+            "abbr": "CD",
+            "testType": "old"
+        },
+        {
+            "name": "William Jenkins",
+            "abbr": "BV",
+            "testType": "old"
+        },
+        {
+            "name": "Patrick Schwartz",
+            "abbr": "CE",
+            "testType": "old"
+        },
+        {
+            "name": "Robert Powell",
+            "abbr": "BW",
+            "testType": "old"
+        },
+        {
+            "name": "Andrew Cohen",
+            "abbr": "CR",
+            "testType": "old"
+        },
+        {
+            "name": "Paul Marshall",
+            "abbr": "BY",
+            "testType": "old"
+        },
+        {
+            "name": "Natalie Shaw",
+            "abbr": "CX",
+            "testType": "new"
+        },
+        {
+            "name": "Andrea Hunt",
+            "abbr": "CY",
+            "testType": "new"
+        },
+        {
+            "name": "Cindy Dunn",
+            "abbr": "CZ",
+            "testType": "new"
+        },
+        {
+            "name": "Karen Perkins",
+            "abbr": "DI",
+            "testType": "new"
+        },
+        {
+            "name": "Abby Pierce",
+            "abbr": "DJ",
+            "testType": "new"
+        },
+        {
+            "name": "Anna Olsen",
+            "abbr": "DK",
+            "testType": "new"
+        },
+        {
+            "name": "Kelsey Hart",
+            "abbr": "DL",
+            "testType": "new"
+        },
+        {
+            "name": "Jeff Cook",
+            "abbr": "DH",
+            "testType": "new"
+        },
+        {
+            "name": "Noah Reid",
+            "abbr": "DV",
+            "testType": "new"
+        },
+        {
+            "name": "Liam Howard",
+            "abbr": "DW",
+            "testType": "new"
+        },
+        {
+            "name": "Caleb Torres",
+            "abbr": "DX",
+            "testType": "new"
+        },
+        {
+            "name": "Conner Gray",
+            "abbr": "DY",
+            "testType": "new"
+        },
+        {
+            "name": "Zach Price",
+            "abbr": "DZ",
+            "testType": "new"
+        },
+        {
+            "name": "Isaac Bennett",
+            "abbr": "EA",
+            "testType": "new"
+        },
+        {
+            "name": "Andy Bourne",
+            "abbr": "P",
+            "testType": "new"
+        },
+        {
+            "name": "MacKensie Barnett",
+            "abbr": "AO",
+            "testType": "new"
+        },
+        {
+            "name": "Jay Hughes",
+            "abbr": "X",
+            "testType": "new"
+        },
+        {
+            "name": "Tyler Clarke",
+            "abbr": "O",
+            "testType": "new"
+        },
+        {
+            "name": "Kieran Feldman",
+            "abbr": "AK",
+            "testType": "new"
+        },
+        {
+            "name": "Pat Dempsey",
+            "abbr": "Z",
+            "testType": "new"
+        },
+        {
+            "name": "Brooke Wright",
+            "abbr": "AD",
+            "testType": "new"
+        },
+        {
+            "name": "Adrian Morris",
+            "abbr": "BA",
+            "testType": "new"
+        },
+        {
+            "name": "Cory Shepard",
+            "abbr": "BH",
+            "testType": "new"
+        },
+        {
+            "name": "London Martin",
+            "abbr": "AW",
+            "testType": "new"
+        },
+        {
+            "name": "Eden Baldwin",
+            "abbr": "AY",
+            "testType": "new"
+        },
+        {
+            "name": "Kim Thomson",
+            "abbr": "AZ",
+            "testType": "new"
+        },
+        {
+            "name": "Drew Weber",
+            "abbr": "Q",
+            "testType": "new"
+        },
+        {
+            "name": "Stacey Bridges",
+            "abbr": "AL",
+            "testType": "new"
+        }
+    ],
+    "Day 2: TEST PHASE": [
+        {
+            "name": "Gerry Walker",
+            "abbr": "BD",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Cassidy Thornton",
+            "abbr": "BF",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Madison Phillips",
+            "abbr": "BM",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Lee Carter",
+            "abbr": "W",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Julia Keller",
+            "abbr": "BS",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Sasha Goldstein",
+            "abbr": "BK",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Meridith Townsend",
+            "abbr": "BN",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Jessie Foster",
+            "abbr": "V",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Dakota Edwards",
+            "abbr": "U",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Shawn Mitchell",
+            "abbr": "BP",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Jamie Harrison",
+            "abbr": "J",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Reese Johnson",
+            "abbr": "K",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Alex Atkins",
+            "abbr": "L",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Morgan Greenwood",
+            "abbr": "C",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Quinn Armstrong",
+            "abbr": "G",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Greg Jennings",
+            "abbr": "H",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Emily Boyd",
+            "abbr": "CO",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Sarah Owens",
+            "abbr": "CI",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Tiffany Horton",
+            "abbr": "CP",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Elizabeth Simpson",
+            "abbr": "CJ",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Megan Stone",
+            "abbr": "CQ",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Alice Creed",
+            "abbr": "CK",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Peter Bell",
+            "abbr": "CD",
+            "testType": "old - retest"
+        },
+        {
+            "name": "William Jenkins",
+            "abbr": "BV",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Patrick Schwartz",
+            "abbr": "CE",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Robert Powell",
+            "abbr": "BW",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Andrew Cohen",
+            "abbr": "CR",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Paul Marshall",
+            "abbr": "BY",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Erin Craig",
+            "abbr": "DU",
+            "testType": "old"
+        },
+        {
+            "name": "Elyse Dawson",
+            "abbr": "EJ",
+            "testType": "old"
+        },
+        {
+            "name": "Emma Tucker",
+            "abbr": "CS",
+            "testType": "old"
+        },
+        {
+            "name": "Olivia Wells",
+            "abbr": "CT",
+            "testType": "old"
+        },
+        {
+            "name": "Sophie Mason",
+            "abbr": "CU",
+            "testType": "old"
+        },
+        {
+            "name": "Chloe Dixon",
+            "abbr": "CV",
+            "testType": "old"
+        },
+        {
+            "name": "Hannah Holmes",
+            "abbr": "CW",
+            "testType": "old"
+        },
+        {
+            "name": "Jacob Moore",
+            "abbr": "DA",
+            "testType": "old"
+        },
+        {
+            "name": "Ethan White",
+            "abbr": "DB",
+            "testType": "old"
+        },
+        {
+            "name": "Daniel Garcia",
+            "abbr": "DC",
+            "testType": "old"
+        },
+        {
+            "name": "Anthony Young",
+            "abbr": "DD",
+            "testType": "old"
+        },
+        {
+            "name": "Matthew King",
+            "abbr": "DE",
+            "testType": "old"
+        },
+        {
+            "name": "Jason Baker",
+            "abbr": "DF",
+            "testType": "old"
+        },
+        {
+            "name": "Kyle Nelson",
+            "abbr": "DG",
+            "testType": "old"
+        },
+        {
+            "name": "Jordan Irwin",
+            "abbr": "B",
+            "testType": "old"
+        },
+        {
+            "name": "Taylor Hamilton",
+            "abbr": "D",
+            "testType": "old"
+        },
+        {
+            "name": "Chris Irving",
+            "abbr": "F",
+            "testType": "old"
+        },
+        {
+            "name": "Sam Anderson",
+            "abbr": "Y",
+            "testType": "old"
+        },
+        {
+            "name": "Robin Jackson",
+            "abbr": "E",
+            "testType": "old"
+        },
+        {
+            "name": "Ali Ferguson",
+            "abbr": "I",
+            "testType": "old"
+        },
+        {
+            "name": "Charlie Henderson",
+            "abbr": "BT",
+            "testType": "old"
+        },
+        {
+            "name": "Jonah Newton",
+            "abbr": "BJ",
+            "testType": "old"
+        },
+        {
+            "name": "Brett Roberts",
+            "abbr": "BI",
+            "testType": "old"
+        },
+        {
+            "name": "Aubrey Reynolds",
+            "abbr": "BQ",
+            "testType": "old"
+        },
+        {
+            "name": "Logan Greenberg",
+            "abbr": "M",
+            "testType": "old"
+        },
+        {
+            "name": "Ricki Jones",
+            "abbr": "BL",
+            "testType": "old"
+        },
+        {
+            "name": "Bobby Lynch",
+            "abbr": "BR",
+            "testType": "old"
+        },
+        {
+            "name": "Kerry Lewis",
+            "abbr": "AX",
+            "testType": "old"
+        },
+        {
+            "name": "Skye Campbell",
+            "abbr": "AA",
+            "testType": "new"
+        },
+        {
+            "name": "Kelly Huth",
+            "abbr": "AB",
+            "testType": "new"
+        },
+        {
+            "name": "Ashley Turner",
+            "abbr": "AH",
+            "testType": "new"
+        },
+        {
+            "name": "Jackie Wagner",
+            "abbr": "AI",
+            "testType": "new"
+        },
+        {
+            "name": "Sandy Davis",
+            "abbr": "AP",
+            "testType": "new"
+        },
+        {
+            "name": "Riley Miller",
+            "abbr": "AR",
+            "testType": "new"
+        },
+        {
+            "name": "Dylan Sanders",
+            "abbr": "AV",
+            "testType": "new"
+        },
+        {
+            "name": "Ainsley Stewart",
+            "abbr": "AM",
+            "testType": "new"
+        },
+        {
+            "name": "Stevie Wilson",
+            "abbr": "AN",
+            "testType": "new"
+        },
+        {
+            "name": "Billie Dailey",
+            "abbr": "R",
+            "testType": "new"
+        },
+        {
+            "name": "Jean Lambert",
+            "abbr": "AU",
+            "testType": "new"
+        },
+        {
+            "name": "Kendall McDonald",
+            "abbr": "A",
+            "testType": "new"
+        },
+        {
+            "name": "Lindsay Richmond",
+            "abbr": "AE",
+            "testType": "new"
+        },
+        {
+            "name": "Bailey Brewer",
+            "abbr": "AG",
+            "testType": "new"
+        },
+        {
+            "name": "Michelle Fox",
+            "abbr": "DM",
+            "testType": "new"
+        },
+        {
+            "name": "Colleen Weaver",
+            "abbr": "DN",
+            "testType": "new"
+        },
+        {
+            "name": "Ruby Elliot",
+            "abbr": "DO",
+            "testType": "new"
+        },
+        {
+            "name": "Louise Welch",
+            "abbr": "DP",
+            "testType": "new"
+        },
+        {
+            "name": "Rachel Fleming",
+            "abbr": "DQ",
+            "testType": "new"
+        },
+        {
+            "name": "Ellen Watts",
+            "abbr": "DR",
+            "testType": "new"
+        },
+        {
+            "name": "Christine Barker",
+            "abbr": "DS",
+            "testType": "new"
+        },
+        {
+            "name": "Justin Barnes",
+            "abbr": "EB",
+            "testType": "new"
+        },
+        {
+            "name": "Bradley Ross",
+            "abbr": "EC",
+            "testType": "new"
+        },
+        {
+            "name": "Grant Perry",
+            "abbr": "ED",
+            "testType": "new"
+        },
+        {
+            "name": "Adam Griffen",
+            "abbr": "EE",
+            "testType": "new"
+        },
+        {
+            "name": "Max Freeman",
+            "abbr": "EF",
+            "testType": "new"
+        },
+        {
+            "name": "Derek Burns",
+            "abbr": "EG",
+            "testType": "new"
+        },
+        {
+            "name": "Thomas Hicks",
+            "abbr": "EH",
+            "testType": "new"
+        },
+        {
+            "name": "Jenny Fletcher",
+            "abbr": "DT",
+            "testType": "new"
+        },
+        {
+            "name": "Amy Brown",
+            "abbr": "CM",
+            "testType": "new"
+        },
+        {
+            "name": "Jennifer Smith",
+            "abbr": "CF",
+            "testType": "new"
+        },
+        {
+            "name": "Julie Bowman",
+            "abbr": "CL",
+            "testType": "new"
+        },
+        {
+            "name": "Lisa Myers",
+            "abbr": "CG",
+            "testType": "new"
+        },
+        {
+            "name": "Melissa Evans",
+            "abbr": "CN",
+            "testType": "new"
+        },
+        {
+            "name": "Laura Wallace",
+            "abbr": "CH",
+            "testType": "new"
+        },
+        {
+            "name": "Ian Black",
+            "abbr": "EI",
+            "testType": "new"
+        },
+        {
+            "name": "Steven Banks",
+            "abbr": "CA",
+            "testType": "new"
+        },
+        {
+            "name": "James O'Donnell",
+            "abbr": "BU",
+            "testType": "new"
+        },
+        {
+            "name": "Brian Hall",
+            "abbr": "CB",
+            "testType": "new"
+        },
+        {
+            "name": "David Gibson",
+            "abbr": "BX",
+            "testType": "new"
+        },
+        {
+            "name": "Joshua Clement",
+            "abbr": "CC",
+            "testType": "new"
+        },
+        {
+            "name": "Mark Crawford",
+            "abbr": "BZ",
+            "testType": "new"
+        },
+        {
+            "name": "Shannon McIntosh",
+            "abbr": "AQ",
+            "testType": "new"
+        },
+        {
+            "name": "Peyton Butler",
+            "abbr": "AS",
+            "testType": "new"
+        },
+        {
+            "name": "Parker Richards",
+            "abbr": "AT",
+            "testType": "new"
+        },
+        {
+            "name": "Terry Schofield",
+            "abbr": "BB",
+            "testType": "new"
+        },
+        {
+            "name": "Ariel Glover",
+            "abbr": "BC",
+            "testType": "new"
+        },
+        {
+            "name": "Avery Murphy",
+            "abbr": "BE",
+            "testType": "new"
+        },
+        {
+            "name": "Dominique Gilbert",
+            "abbr": "BG",
+            "testType": "new"
+        },
+        {
+            "name": "Joey Collins",
+            "abbr": "AF",
+            "testType": "new"
+        },
+        {
+            "name": "Frankie Bender",
+            "abbr": "AC",
+            "testType": "new"
+        },
+        {
+            "name": "Rory Cooper",
+            "abbr": "AJ",
+            "testType": "new"
+        },
+        {
+            "name": "Blake Fuller",
+            "abbr": "S",
+            "testType": "new"
+        },
+        {
+            "name": "Cody Prebble",
+            "abbr": "BO",
+            "testType": "new"
+        },
+        {
+            "name": "Devon Peterson",
+            "abbr": "N",
+            "testType": "new"
+        },
+        {
+            "name": "Tracy Hubbard",
+            "abbr": "T",
+            "testType": "new"
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+
+var questionLogs = {"listNumber":1,"numWrong":2,"numRight":2,"questions":[{"personName":"Olivia Wells","personId":1234,"userAnswer":"old","correctAnswer":"old","timeTilAnswer":null,"didTimeout":"false"},{"personName":"Emma Tucker","personId":1234,"userAnswer":"new","correctAnswer":"old","timeTilAnswer":79,"didTimeout":"false"},{"personName":"Elyse Dawson","personId":1234,"userAnswer":"old","correctAnswer":"old","timeTilAnswer":792,"didTimeout":"false"},{"personName":"Erin Craig","personId":1234,"userAnswer":"new","correctAnswer":"old","timeTilAnswer":59,"didTimeout":"false"}],"time":1338777648307}
+
+var rightId = 0
+  var oldTotal = 0
+  var wrongRej = 0
+  var newTotal = 0
+  for (var i =0;i<questionLogs.questions.length; i++)
+  {
+    var log = questionLogs.questions[i];
+    if(log.correctAnswer == "old")
+    {
+      oldTotal++;
+      if(log.correctAnswer == log.userAnswer)
+      {
+        rightId++;
+      }
+    }
+    else{
+      newTotal++
+      if(log.correctAnswer == log.userAnswer)
+      {
+        wrongRej++;
+      }
+    }
+  }
+  $(document).ready(function(){
+
+     var sendTestResult = function(){
+        // showScore()
+        // SLoppy string concatentation.  print out data to see total string
+        var serverLogs = "'&testDay='"+testDay+"'&rightId='"+rightId+"'&oldTotal='"+oldTotal;
+        serverLogs += "'&wrongRej='"+wrongRej+"'&newTotal='"+newTotal+"'";
+        $.ajax({
+          type: "GET",
+          contentType: "application/json; charset=utf-8",
+          url: "recordTestResult.php",
+          data: "data='"+JSON.stringify(questionLogs)+serverLogs,
+          // dataType: "json",
+          success:function(data)
+          {
+            result = jQuery.parseJSON( data );
+            alert (result)
+            window.console.log(result);
+            $("#score").html(result.score)
+            $("#level").html(result.level)
+          }
+        });
+      }
+
+      sendTestResult()
+  })
+
+</script>

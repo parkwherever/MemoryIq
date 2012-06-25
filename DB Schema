@@ -1,0 +1,107 @@
+-- phpMyAdmin SQL Dump
+-- version 3.3.9.2
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Jun 25, 2012 at 12:34 AM
+-- Server version: 5.5.9
+-- PHP Version: 5.3.6
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `psych`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `demo`
+--
+
+CREATE TABLE `demo` (
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `country` varchar(30) NOT NULL,
+  `age` varchar(10) NOT NULL,
+  `gender` varchar(10) NOT NULL,
+  `hand` varchar(10) NOT NULL,
+  `natLanguage` varchar(30) NOT NULL,
+  `edu` varchar(30) NOT NULL,
+  `alert` varchar(30) NOT NULL,
+  `race` varchar(50) NOT NULL,
+  `isLatino` varchar(5) NOT NULL,
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `demo`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `detailTestLog`
+--
+
+CREATE TABLE `detailTestLog` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uid` int(11) NOT NULL,
+  `testNumber` int(11) NOT NULL,
+  `pairId` int(11) NOT NULL,
+  `userAnswer` varchar(10) NOT NULL,
+  `correctAnswer` varchar(10) NOT NULL,
+  `timeUntilAnswer` int(11) DEFAULT NULL,
+  `testDay` tinyint(2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=818 ;
+
+--
+-- Dumping data for table `detailTestLog`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `testOverviewLongTerm`
+--
+
+CREATE TABLE `testOverviewLongTerm` (
+  `uid` int(11) NOT NULL,
+  `hits` int(11) NOT NULL,
+  `falseAlarms` int(11) NOT NULL,
+  `performance` int(11) NOT NULL,
+  `oldHitRate` int(11) NOT NULL,
+  `newHitRate` int(11) NOT NULL,
+  `timeSinceFirstTest` int(11) NOT NULL,
+  `testNumber` int(11) NOT NULL,
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `testOverviewLongTerm`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `testOverviewShortTerm`
+--
+
+CREATE TABLE `testOverviewShortTerm` (
+  `uid` int(11) NOT NULL,
+  `hits` int(11) NOT NULL,
+  `falseAlarms` int(11) NOT NULL,
+  `performance` int(11) NOT NULL,
+  `oldHitRate` int(11) NOT NULL,
+  `newHitRate` int(11) NOT NULL,
+  `date` int(11) NOT NULL,
+  `testNumber` int(11) NOT NULL,
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `testOverviewShortTerm`
+--
+

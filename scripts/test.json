@@ -1,0 +1,64 @@
+{
+    "Day 1: STUDY PHASE": [
+        {
+            "name": "Erin Craig",
+            "abbr": "DU"
+        },
+        {
+            "name": "Elyse Dawson",
+            "abbr": "EJ"
+        },
+        {
+            "name": "Emma Tucker",
+            "abbr": "CS"
+        },
+        {
+            "name": "Olivia Wells",
+            "abbr": "CT"
+        }
+    ],
+    "Day 1: TEST PHASE": [
+        {
+            "name": "Erin Craig",
+            "abbr": "DU",
+            "testType": "old"
+        },
+        {
+            "name": "Elyse Dawson",
+            "abbr": "EJ",
+            "testType": "old"
+        },
+        {
+            "name": "Emma Tucker",
+            "abbr": "CS",
+            "testType": "old"
+        },
+        {
+            "name": "Olivia Wells",
+            "abbr": "CT",
+            "testType": "old"
+        }
+    ],
+    "Day 2: TEST PHASE": [
+        {
+            "name": "Erin Craig",
+            "abbr": "DU",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Elyse Dawson",
+            "abbr": "EJ",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Emma Tucker",
+            "abbr": "CS",
+            "testType": "old - retest"
+        },
+        {
+            "name": "Olivia Wells",
+            "abbr": "CT",
+            "testType": "old - retest"
+        }
+    ]
+}

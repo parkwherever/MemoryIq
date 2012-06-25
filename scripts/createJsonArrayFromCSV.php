@@ -11,6 +11,9 @@
 ,"AI","Jackie Wagner","new"
 ,"EJ","Elyse Dawson","old - retest"
 
+
+Put through JSONLINT.com after running to fix few minor errors. 
+Sorry for the lazy implementation
 */
 class TestPhase
 {
@@ -39,34 +42,69 @@ function setTestPhase($tl, $oldTestPhase){
 	return $oldTestPhase;
 	
 }
-$file_handle = fopen("FaceNameMappingCond1.txt", "r");
+$file_handle = fopen("list5.csv", "r");
+// print("[</br>");
+print("{</br>");
+
+$first = 0;
 while (!feof($file_handle)) {
+	
    	$line = fgets($file_handle);
    	$entry = explode(",", $line);	
 	$title = $entry[0];
 	$abbr = $entry[1];
 	$name = $entry[2];
 	$testType = $entry[3];
+
+	if(strlen($title)>4){
+		
+		print ($title.':');
+		print("[");
+		print("</br>");
+		continue;
+	}
+	if (strlen($name)>2)
+	{
+		print("{</br>");
+		print ("\"name\":$name,");
+		print("</br>");
+		if(!is_null($testType)&& strlen($testType)>1){
+			print ("\"abbr\":$abbr,");
+		    print("</br>");
+			print ("\"testType\":$testType");
+			print("</br>");
+		}
+		else
+		{
+			print ("\"abbr\":$abbr");
+			print("</br>");
+		}
+		
+		print ("},</br>");
+	}
+	
  	// print_r($entry[0]);
 
-	if (strlen($title)>0){
-		print $title;
-		//chop, or substring
-		$compareStr = "Day 2: TEST PHASE";
-		if ($title == $compareStr){
-			print("Equals");
-		}
-		if(strcasecmp($title, $compareStr) ==0){
-			print("Equals2");
-		}
-		print("</br>");
-	}
-	$abbr = $entry[1];	
-	$name = $entry[2];
-	$testPhase = setTestPhase($title, $testPhase);
+	// if (strlen($title)>0){
+	// 	print $title;
+	// 	//chop, or substring
+	// 	$compareStr = "Day 2: TEST PHASE";
+	// 	if ($title == $compareStr){
+	// 		print("Equals");
+	// 	}
+	// 	if(strcasecmp($title, $compareStr) ==0){
+	// 		print("Equals2");
+	// 	}
+	// 	print("</br>");
+	// }
+	
+	// $testPhase = setTestPhase($title, $testPhase);
 	// printFormat($dict[$abbr]);
+
 	
 }
+print("]</br>}");
+// print("]");
 fclose($file_handle);
 
 // // WRITE SQL Statements 

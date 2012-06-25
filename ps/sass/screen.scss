@@ -11,6 +11,7 @@
 $bright-blue:#0088ee;
 $dark-blue:#004488;
 $light-blue:#ccddff;
+$button-highlight:#e3ecff;
 $orange:#ffaa66;
 $black:#362A2F;
 
@@ -25,6 +26,9 @@ $mediumFont:1.5em;
 }
 .label{
     font-family:"Times New Roman", Times, serif;
+}
+.center{
+    text-align:center;
 }
 .button {
     width:250px;
@@ -71,10 +75,13 @@ h2{
     font-size:$mediumFont;
      color:$dark-blue;
 }
+i{
+    font-style:italic;
+}
 
 /*Intro Instructions*/
 #startContainer{
-    height:440px;
+    height:500px;
     overflow: hidden;
 }
 .startItemMain{
@@ -97,13 +104,31 @@ h2{
     font-weight: bold;
     margin-bottom:15px;
 }
+#consentR{
+    width:$mainWidth - 20px; 
+    p{
+        font-size:.9em;
+        width:$mainWidth - 20px;
+    }
+}
 .startNextButton{
     @extend .button;
     width:100px;
     color: $bright-blue;
     background-color: $light-blue;
     float:right;
+    position: relative;
+    top:10px;
     margin-right:20px;
+}
+b{
+    font-weight:bold;
+}
+.startItemInner ul{
+    margin:15px;
+}
+.startNextButton:hover{
+    background-color: $button-highlight;
 }
 .startItem{
     clear:both;
@@ -126,8 +151,25 @@ h2{
     background-color: $light-blue;
 
 }
-
 /*End Intro Instructions*/
+/*Start Test Buttons*/
+#testPanel{
+    text-align:center;
+    position: relative;
+    top:5px;
+}
+.quizBtn{
+    @extend .button;
+    margin:15px;
+    width:100px;
+    color: $bright-blue;
+    background-color: $light-blue;
+    display:inline-block;
+}
+.quizBtn:hover{
+    background-color: $button-highlight;
+}
+/*End Test Buttons*/
 #wrapper{
   
 }
@@ -152,6 +194,9 @@ h2{
     @include border($light-blue,3px,ridge);
 /*    border-bottom:none;*/
 }
+.photoPairWrapper{
+    height:400px;
+}
 #spacer{
     height:100px;
 }
@@ -168,5 +213,36 @@ h2{
     @extend .label;
     font-size:3.5em;
 }
-
-
+#btnWrapper{
+    width:$mainWidth - 130px;
+    height:50px;
+    top:-10px;
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+}
+.btnPair{
+    width:200px;
+    font-size:20px;
+}
+#emailField{
+    font-size:1.2em;
+    height:40px;
+    width:200px;
+}
+#submitEmail{
+    top:-40px;
+    font-size:1.2em;
+}
+.spacedFont{
+    line-height:20px;
+}
+#goToResults{
+    width:300px;
+}
+.wideBtn{
+    width:300px;
+}
+red{
+    color:red;
+}

@@ -1,0 +1,283 @@
+<html>
+<!-- Started 3pm 25th -->
+<head>
+<LINK REL=StyleSheet HREF="ps/stylesheets/day2.css" TYPE="text/css" >
+<LINK REL=StyleSheet HREF="ps/stylesheets/screen.css" TYPE="text/css" >
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="resources/js/study.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+		//Init Setup
+	$(".startItem").hide();
+	$(".photoPairWrapper").hide();
+	$(".startItem:first").show();
+	$("#testPanel").hide();
+
+	$("#share").hide()
+	//DEV
+	 // $(".startItem:last").show()
+	 // $(".photoPair").show();
+	
+	// $(".testPanel").show();
+	//DELETE DEV
+	// Call the function to get 
+	// loadInfo("scripts/test.json")
+	function getParameterByName(name)
+	{
+	  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+	  var regexS = "[\\?&]" + name + "=([^&#]*)";
+	  var regex = new RegExp(regexS);
+	  var results = regex.exec(window.location.search);
+	  if(results == null)
+	    return "";
+	  else
+	    return decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
+
+	var listNum =getParameterByName("ln")
+	if (!listNum)
+	{
+		alert('Please Use the Link Sent to You to Complete this Study')
+	}
+
+	loadInfo("finalLists/list"+listNum+".json")
+	testDay = 2
+	/************* Helper Function ****************/
+	// Function to get full path of images
+
+	doDemographics = function(){
+		$("#header").animate({opacity:1},400)
+		$(".startItem").hide();
+		$("#middleSeg").show()
+		$("#startContainer").show();
+		$(".photoPairWrapper").hide()
+	}
+	$("#submitDemo").click(function(){
+		var nextElement = $(this).parent().parent().parent('.startItem').next();
+		$(this).parent().parent().parent('.startItem').hide(200)
+		$(nextElement).show();
+	})
+	/******* Navigation Logic ******************/
+	$(".scrollPage").click(function(){
+		var nextElement = $(this).parent('.startItem').next();
+		$(this).parent('.startItem').hide(200)
+		$(nextElement).show();
+	})
+	//One more div down in hierarchy from parent startItem
+	$('#agreeButton').click(function() {
+	   var nextElement = $(this).parent().parent('.startItem').next();
+	   $(this).parent().parent('.startItem').hide(200)
+	   $(nextElement).show();
+	});
+
+	endFirstTest = function(){
+		$("#testPanel").hide();	
+		$(".startItem").hide();
+		$("#testResults").show()
+		$("#startContainer").fadeIn(500);
+		$(".photoPairWrapper").hide()
+		$("#header").animate({opacity:1},500)
+	}
+	/***********TEST PHASE **************/
+	$("#quizOld").click(function(){
+		testAnswer('old')
+	})
+	$("#quizNew").click(function(){
+		testAnswer('new')
+	})
+	/************Submit Email phase ************/
+	$("#gotoEmail").click(function(){
+		$("#testResults").fadeOut(200,function(){
+			$("#email").fadeIn(400)
+		})
+	})
+	$("#submitEmail").click(function(){
+		$(this).parent().parent().parent().hide()
+		$(this).parent().parent().parent().next().fadeIn(300)
+	})
+	$("#goToResults").click(function(){
+		$("#gotoEmail").hide()
+		$("#share").show()
+		$("#thanksPage").fadeOut(200,function(){
+			$("#testResults").fadeIn(400)
+		})
+	})
+
+
+	
+});
+
+
+
+
+// Helper Functions
+var shuffle = function(o){ //v1.0
+	for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+	return o;
+};
+
+
+
+</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<img src="resources/im/logo2.png"/>
+		</div>
+		<div id="main">
+			<div id="spacer">
+			</div>
+			<div id="startContainer">
+				
+				<!-- INFO SCREEN -->
+				<div class="startItem" id="info">
+					<h1>
+						The Face-Name Memory IQ Project
+					</h1>
+					<h2>
+						Thank you for returning today!
+					</h2>
+					<div class="startItemMain">
+						<div class="startItemInner">
+							<img class="" src="resources/im/start/head.png"/>
+						</div>
+						<div class="startItemInner">
+							<p>
+								Today you will have one task to complete. In the following section you will be presented with face-name pairs in the center of the screen, one at a time. Some of the faces you studied on the first day, and some of them are new. 
+							</p>
+							<p>
+								You will make one of two judgments about the face-name combination on the screen:
+							</p>
+							<ul>
+								<li><a>a) <b>Old</b>: Old: It is an old face-name pair that you studied yesterday.</a></li>
+								<li><a>b) <b>New</b>: it is a totally new face and name.</a></li>
+							</ul>
+							<p>
+								When you are ready to begin, please press the begin button.
+							</p>
+						</div>
+					</div>
+					<div class="startNextButton startTestPhase2">
+						Begin
+					</div>
+				</div>
+				
+				<!-- AFTER TEST PHASE 1 -->
+				<div id="testResults" class="startItem">
+					<h1>
+						Your Face-Name Long Term Memory IQ
+					</h1>
+					<h2>
+						How do your results measure up to others who have taken our test?
+					</h2>
+					<div class="startItemMain">
+						<div class="startItemInner">
+							<img class="" src="resources/im/endface.png"/>
+						</div>
+						<div class="startItemInner">
+							<h2>Your long term memory IQ score: ___</h2>
+							<p>
+								__% of the people taking this task have performed at the same level or lower than you did.
+							</p>
+							<p>
+								You correctly identified __% of items that were studied during the study phase, and correctly rejected ___% of the new face-name pairs.
+							</p>
+							<p> 
+								<u>Note:</u> your face-name memory IQ score is based on the scores of people who have completed this task thus far. This memory IQ score is one of many types of measures of memory and face-name processing.
+							</p>
+							
+						</div>
+					</div>
+					<div id="btnWrapper">
+						<div id="gotoEmail" class="wideBtn startNextButton">
+							Interested in Participating in Future Research?
+						</div>
+						<div id="share"class="startNextButton btnPair">
+							Share Link with Friends
+						</div> 
+					</div>
+				</div>
+				<div id="email" class="startItem">
+					<h1>
+						Thank You for Your Interest in Participating in Future Research.
+					</h1>
+					<h2>
+			
+					</h2>
+					
+					<div class="startItemMain">
+						<div class="startItemInner">
+							
+						</div>
+						<div class="startItemInner">
+							</br>
+							<p>
+								Please enter your email address below so that a member of our research team may email you in the future to participate in one of our studies
+							</p>
+							<p>
+								<u>Note:</u> the email address will only be available to this research team and will <b>not</b> be distributed to anyone else.
+							</p>
+							<p> 
+								If you decide that you do not want to participate in our study, you may discontinue being contacted/participating at any time.
+							</p>
+							</br>
+							<form name="email">
+								<input id="emailField" type="text" name="email"/>
+							</form>
+							<div id="submitEmail" class="startNextButton">
+								Submit
+							</div>
+						</div>
+					</div>				
+				</div>
+				<div id="thanksPage" class="startItem">
+					<h1>
+						Thanks For Your Participation!	
+					</h1>
+					<h2>
+					</h2>
+					
+					<div class="startItemMain">
+						<div class="startItemInner">
+							</br>
+							<p class="spacedFont">
+								This experiment investigated a memory for faces and names. We are hopeful that by
+examining a large number of participants, we will be better able to understand the variability
+across people in this important social skill. Please note that many factors can influence your
+performance on this simple task, such as your age, whether there is distraction in the room,
+practice with memory tasks, etc. So, one should not use this task as an indicator of your
+general memory performance.
+							</p>
+							</br>
+							
+							<div id="goToResults" class="startNextButton">
+								Back To Results Page
+							</div>
+						</div>
+					</div>				
+				</div>
+			</div>
+			<!-- End Screens -->
+			<div class="photoPairWrapper">
+				<div class="photoPair">
+					<div class="empty"></div>
+					<div class="photoBorder">
+						<img class="imgSrc" src="">
+					</div>
+					<div class="photoName"></div>
+				</div>
+			</div>
+			<div id="testPanel">
+				<div id="quizOld" class="quizBtn">Old</div>
+				<div id="quizNew"class="quizBtn">New</div>
+			</div>
+
+		</div>
+	</div>
+</body>
+
+</html>
+	
