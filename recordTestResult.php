@@ -1,6 +1,6 @@
 <?php
 	// Data = test detail results
-	$data = $_GET['data'];
+	$data = $_POST['data'];
 	if (is_null($data) || empty($data))
 	{
 		echo "Error Calculating IQ";
@@ -18,24 +18,24 @@
 	    $totalNumWrong = $data->numWrong;
 	    $totalNumRight = $data->numRight;
 
-	    $testDay = $_GET['testDay'];
+	    $testDay = $_POST['testDay'];
 	    $testDay = substr(stripslashes($testDay), 1, -1);
 
 	    // Total correct identifications of old names
-	    $rightId = $_GET['rightId'];
+	    $rightId = $_POST['rightId'];
 	   	$rightId = substr(stripslashes($rightId), 1, -1);
 
 	   	// Total old questions
-	    $oldTotal = $_GET['oldTotal'];
+	    $oldTotal = $_POST['oldTotal'];
 	    $oldTotal = substr(stripslashes($oldTotal), 1, -1);
 	    $oldHitRate = $rightId / $oldTotal;
 
 	    // Total correct rejections of new names
-	    $wrongRej = $_GET['wrongRej'];
+	    $wrongRej = $_POST['wrongRej'];
 	    $wrongRej = substr(stripslashes($wrongRej), 1, -1);
 
 	    // Total new questions asked
-		$newTotal = $_GET['newTotal'];
+		$newTotal = $_POST['newTotal'];
 	    $newTotal = substr(stripslashes($newTotal), 1, -1);
 	    $newHitRate = $wrongRej / $newTotal;
 

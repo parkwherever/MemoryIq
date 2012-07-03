@@ -28,7 +28,7 @@ $(document).ready(function(){
       }
   })
 }
-	
+  
     //Ajax call to get friend data
 
   var loadImages = function(){
@@ -275,21 +275,43 @@ showScore = function(){
     // SLoppy string concatentation.  print out data to see total string
     var serverLogs = "'&testDay='"+testDay+"'&rightId='"+rightId+"'&oldTotal='"+oldTotal;
     serverLogs += "'&wrongRej='"+wrongRej+"'&newTotal='"+newTotal+"'";
+
+
+
+    // $.ajax({
+    //   type: "GET",
+    //   contentType: "application/json; charset=utf-8",
+    //   url: "recordTestResult.php",
+    //   data: "data='"+JSON.stringify(questionLogs)+serverLogs,
+    //   // dataType: "json",
+    //   success:function(data)
+    //   {
+    //     result = jQuery.parseJSON( data );
+    //     alert (result)
+    //     window.console.log(result);
+    //     $("#score").html(result.score)
+    //     $("#level").html(result.level)
+    //   }
+    // });
     $.ajax({
-      type: "GET",
-      contentType: "application/json; charset=utf-8",
+      type: "POST",
+     // contentType: "application/json; charset=utf-8",
       url: "recordTestResult.php",
       data: "data='"+JSON.stringify(questionLogs)+serverLogs,
       // dataType: "json",
       success:function(data)
       {
         result = jQuery.parseJSON( data );
-        alert (result)
+        // alert (result)
         window.console.log(result);
         $("#score").html(result.score)
         $("#level").html(result.level)
       }
     });
+
+
+
+
   }
 
 // End DOCUMENT READY FUNCTION
