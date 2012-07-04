@@ -21,6 +21,7 @@ $(document).ready(function(){
 	 // $(".photoPair").show();
 	
 	// $(".testPanel").show();
+	// loadInfo("scripts/test.json")
 	//DELETE DEV
 	// Call the function to get 
 	// loadInfo("scripts/test.json")
@@ -36,13 +37,14 @@ $(document).ready(function(){
 	    return decodeURIComponent(results[1].replace(/\+/g, " "));
 	}
 
-	var listNum =getParameterByName("ln")
-	if (!listNum)
+	listNum =getParameterByName("ln")
+	userid = getParameterByName("ud")
+	if (!listNum || !userid)
 	{
 		alert('Please Use the Link Sent to You to Complete this Study')
 	}
 
-	loadInfo("finalLists/list"+listNum+".json")
+	loadInfo("finalLists/list"+listNum+".json"
 	testDay = 2
 	/************* Helper Function ****************/
 	// Function to get full path of images
@@ -178,15 +180,18 @@ var shuffle = function(o){ //v1.0
 							<img class="" src="resources/im/endface.png"/>
 						</div>
 						<div class="startItemInner">
-							<h2>Your long term memory IQ score: ___</h2>
+							<h2>Your immediate memory IQ score: <red id="score"></red></h2>
 							<p>
-								__% of the people taking this task have performed at the same level or lower than you did.
+								<red id="level"></red>% of the people taking this task have performed at the same level or lower than you did.
 							</p>
 							<p>
-								You correctly identified __% of items that were studied during the study phase, and correctly rejected ___% of the new face-name pairs.
+								You correctly identified <red id="rightId"></red>% of items that were studied during the study phase, and correctly rejected <red id="wrongRej"></red>% of the new face-name pairs.
 							</p>
 							<p> 
 								<u>Note:</u> your face-name memory IQ score is based on the scores of people who have completed this task thus far. This memory IQ score is one of many types of measures of memory and face-name processing.
+							</p>
+							<p id="askForEmail">
+								If you would like to know your long-term face-name memory IQ score, click on the right button below to participate in the final portion of this study tomorrow. A link will be sent to you, which again is totally voluntary.
 							</p>
 							
 						</div>

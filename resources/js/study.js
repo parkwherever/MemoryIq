@@ -1,6 +1,7 @@
 // ALL INSIDE DOC READY FUNCTION SINCE MANY FUNCTIONS REQUIRE JQUERY METHODS
 
 /* *************ASSOC HTML *********** 
+//  This HTML in is manipulated by this javascript file
   <div class="photoPairWrapper">
         <div class="photoPair">
           <div class="empty"></div>
@@ -29,7 +30,8 @@ $(document).ready(function(){
   })
 }
   
-    //Ajax call to get friend data
+    //Ajax call to get image data
+    //Effectively preloads images so 
 
   var loadImages = function(){
     $(firstStudy).each(function(){
@@ -113,7 +115,7 @@ $(document).ready(function(){
     })
   }
     /***************Wrapper Caller Functions *************/
-
+    // initiates tests based upon different phases
   var startStudyPhase = function (){
     $("#header").animate({opacity:0},500,function(){
       setupStudy(1,firstStudy.length,2500)
@@ -137,13 +139,14 @@ $(document).ready(function(){
   $(".startTestPhase2").click(startTestPhase2)
 
  /***************Logging Class *************/
- //Fixme need list number and userid
+ //Contains class methods and objects used to accumulate results of the test
  var getListNum = function(){
-   return 1;
+   return listNum;
  }
  var getPersonId = function(abbr)
  {
-  return 1234
+  // this logic moved to php script
+  return abbr;
  }
  function Question(personName, personId, userAnswer, correctAnswer, timeTilAnswer, didTimeout)
  {
@@ -210,11 +213,7 @@ function QuestionLog(listNum, dayNum) {
   //Checks if actual answer is the same as the expected answer
   testAnswer = function(answer){
     questionLogs.logAnswer(src[testIndex].name, getPersonId(src[testIndex].abbr), answer, src[testIndex].testType, "false")
-    // if(answer == src[testIndex].testType){
-    //   console.log(('Answered Correctly '+src[testIndex].name + ' ans '+ src[testIndex].testType))
-    // }else{
-    //   console.log(('Answered '+answer +' incorrectly for '+src[testIndex].name + ' ans: '+ src[testIndex].testType))
-    // }
+
     clearInterval(inter)
     showTestImage()
     inter = setInterval(testTimeout, 10000);
@@ -235,9 +234,10 @@ function QuestionLog(listNum, dayNum) {
     updateContainerImage(src,testIndex)
   }
 
+//  Calculates user score and hit/miss riate
 showScore = function(){
-  var score = "score"
-  var level = "level"
+  var score = "Calculating.."
+  var level = "Calculating.."
   //Global So sendTestResult can access
   rightId = 0
   oldTotal = 0
@@ -263,36 +263,20 @@ showScore = function(){
     }
   }
 
+// Presets score values as default
   $("#score").html(score);
   $("#level").html(level);
-  $("#rightId").html(100*rightId/oldTotal);
-  $("#wrongRej").html(100*wrongRej/newTotal);
+  $("#rightId").html(Math.floor(100*rightId/oldTotal));
+  $("#wrongRej").html(Math.floor(100*wrongRej/newTotal));
 }
 
-// Data Capturing
+// Sends test results overview and details log.  Returns the user Iq and ratio compared to others
   var sendTestResult = function(){
     showScore()
     // SLoppy string concatentation.  print out data to see total string
     var serverLogs = "'&testDay='"+testDay+"'&rightId='"+rightId+"'&oldTotal='"+oldTotal;
-    serverLogs += "'&wrongRej='"+wrongRej+"'&newTotal='"+newTotal+"'";
+    serverLogs += "'&wrongRej='"+wrongRej+"'&newTotal='"+newTotal+"'&userid='"+userid+"'";
 
-
-
-    // $.ajax({
-    //   type: "GET",
-    //   contentType: "application/json; charset=utf-8",
-    //   url: "recordTestResult.php",
-    //   data: "data='"+JSON.stringify(questionLogs)+serverLogs,
-    //   // dataType: "json",
-    //   success:function(data)
-    //   {
-    //     result = jQuery.parseJSON( data );
-    //     alert (result)
-    //     window.console.log(result);
-    //     $("#score").html(result.score)
-    //     $("#level").html(result.level)
-    //   }
-    // });
     $.ajax({
       type: "POST",
      // contentType: "application/json; charset=utf-8",
@@ -304,16 +288,48 @@ showScore = function(){
         result = jQuery.parseJSON( data );
         // alert (result)
         window.console.log(result);
-        $("#score").html(result.score)
-        $("#level").html(result.level)
+        $("#score").html(Math.floor(result.score))
+        $("#level").html(Math.floor(result.level))
       }
     });
-
-
-
-
   }
 
+  // Sends demographic info and returns a userId to keep track of user for the remainder of the test
+  sendDemoInfo = function(){
+    var resident = $("#demo-resident").val()
+    var age = $("#demo-age").val()
+    var sex = $("#demo-sex").val()
+    var hand = $("#demo-hand").val()
+    var lang = $("#demo-lang").val()
+    var edu = $("#demo-edu").val()
+    var alert = $("#demo-alert").val()
+    var race = $("#demo-race").val()
+    var latino = $("#demo-latino").val()
+    var info = {
+      resident:resident,
+      age:age,
+      sex:sex,
+      hand:hand,
+      lang:lang,
+      edu:edu,
+      alert:alert,
+      race:race,
+      latino:latino
+    }
+    $.ajax({
+      type: "GET",
+      contentType: "application/json; charset=utf-8",
+      url: "recordDemo.php",
+      data: "data='"+JSON.stringify(info) + "'",
+      // dataType: "json",
+      success:function(useridobj)
+      {
+        // Set the user id as a global variable
+        result = jQuery.parseJSON( useridobj );
+        userid = result.userid
+      }
+    });
+  }
 // End DOCUMENT READY FUNCTION
 })
 

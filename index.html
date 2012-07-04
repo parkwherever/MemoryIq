@@ -15,19 +15,20 @@ $(document).ready(function(){
 
 	//DEV
 	 // $(".startItem:last").prev().show()
-	 
+	 // $("#demoPage").show()
 	 // $("#testPhase").show()
 	 
 	 // $(".photoPair").show();
 	
 	// $(".testPanel").show();
-	//DELETE DEV
+	
 	// Call the function to get 
-	loadInfo("scripts/test.json")
+	// loadInfo("scripts/test.json")
+	//End DEV
 
-	var listNum = Math.ceil(Math.random()*5)
+	listNum = Math.ceil(Math.random()*5)
 	testDay = 1;
-	// loadInfo("finalLists/list"+listNum+".json")
+	loadInfo("finalLists/list"+listNum+".json")
 	/************* Helper Function ****************/
 	// Function to get full path of images
 
@@ -39,6 +40,7 @@ $(document).ready(function(){
 		$(".photoPairWrapper").hide()
 	}
 	$("#submitDemo").click(function(){
+		sendDemoInfo()
 		var nextElement = $(this).parent().parent().parent('.startItem').next();
 		$(this).parent().parent().parent('.startItem').hide(200)
 		$(nextElement).show();
@@ -287,14 +289,14 @@ term Face-Name Memory IQ</i>
 					</div>
 				</div>
 				<!-- INFO SCREEN -->
-				<div class="startItem" >
+				<div class="startItem" id="demoPage">
 					<h1>
 						Demographics
 					</h1>
 					<h2>
 						Thanks for completing the study so far!
 					</h2>
-					<div class="startItemMain">
+					<div class="startItemMain" >
 						<!-- <div class="startItemInner">
 							<img class="" src="resources/im/start/head.png"/>
 						</div> -->
@@ -305,24 +307,24 @@ proceeding onto the last portion of the study, please complete the following:
 							</p>
 							<form>
 								I am a resident of 
-								<select name="resident">
+								<select id="demo-resident" name="resident">
 								  <option value="us">US</option>
 								  <option value="aus">Australia</option>
 								  <option value="eng">England</option>
 								  <option value="can">Canada</option>
 								</select><br />
 								I am
-								<select name="age">
+								<select id="demo-age" name="age">
 								  <option value="20">18-25</option>
 								  <option value="25">25-35</option>
 								  <option value="35">35-45</option>
 								  <option value="45">45-55</option>
 								  <option value="55">55+</option>
 								</select><br />
-								I am <input type="radio" name="sex" value="male" /> Male <input type="radio" name="sex" 	value="female" /> Female</br>
-								I am <input type="radio" name="hand" value="right" /> Right Handed <input type="radio" name="sex" 	value="left" /> Left Handed</br>
-								My native language is <input type="text" name="language" /><br />
-								My highest level of education is <select name="edu">
+								I am <input type="radio" id="demo-sex"name="sex" value="male" /> Male <input type="radio" name="sex" value="female" /> Female</br>
+								I am <input type="radio" id="demo-hand" name="hand" value="right" /> Right Handed <input type="radio" name="hand" 	value="left" /> Left Handed</br>
+								My native language is <input id="demo-lang" type="text" name="language" /><br />
+								My highest level of education is <select id="demo-edu" name="edu">
 								  <option value="shs">Some High School</option>
 								  <option value="hsg">High School Graduate</option>
 								  <option value="sc">Some College</option>
@@ -330,14 +332,14 @@ proceeding onto the last portion of the study, please complete the following:
 								  <option value="pcd">Post College Degree</option>
 								</select><br />
 								What time of day do you feel most alert? 
-								<select name="alert">
+								<select id="demo-alert" name="alert">
 									 <option value="morning">Morning</option>
 									 <option value="afternoon">Afternoon</option>
 									 <option value="evening">Evening</option>
 									 <option value="No Differences">No Differences</option>
 								</select><br />
 								What racial category best applies to you?
-								<select name="race">
+								<select id="demo-race" name="race">
 									 <option value="American Indian/Alaskan Native">American Indian/Alaskan Native</option>
 									 <option value="Asian">Asian</option>
 									 <option value="Native Hawaiian or Other Pacific Islander">Native Hawaiian or Other Pacific Islander</option>
@@ -347,7 +349,7 @@ proceeding onto the last portion of the study, please complete the following:
 									 <option value="Prefer not to respond">Prefer not to respond</option>
 								</select><br />
 								Do you consider yourself to be Hispanic or Latino?
-								<select name="latino">
+								<select id="demo-latino" name="latino">
 									 <option value="Yes">Yes</option>
 									 <option value="No">No</option>
 									 <option value="Prefer not to Respond">Prefer not to respond</option>

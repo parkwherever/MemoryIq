@@ -35,30 +35,30 @@
         },
         {
             "name": "Olivia Wells",
-            "abbr": "CT",
-            "testType": "old"
+            "abbr": "C",
+            "testType": "new"
         }
     ],
     "Day 2: TEST PHASE": [
         {
             "name": "Erin Craig",
             "abbr": "DU",
-            "testType": "old - retest"
+            "testType": "old"
         },
         {
             "name": "Elyse Dawson",
             "abbr": "EJ",
-            "testType": "old - retest"
+            "testType": "old"
         },
         {
             "name": "Emma Tucker",
             "abbr": "CS",
-            "testType": "old - retest"
+            "testType": "old"
         },
         {
             "name": "Olivia Wells",
-            "abbr": "CT",
-            "testType": "old - retest"
+            "abbr": "A",
+            "testType": "new"
         }
     ]
 }
