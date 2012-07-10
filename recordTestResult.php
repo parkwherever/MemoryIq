@@ -2,7 +2,7 @@
 // Degbugging only
 // ini_set('display_errors', 'On');
 // error_reporting(E_ALL);
-require_once("scripts/genMappingArray.php");
+require_once("./genMappingArray.php");
 
 	// Data = test detail results
 	$data = $_POST['data'];
@@ -116,19 +116,32 @@ require_once("scripts/genMappingArray.php");
 	    {
 	    	$select = "SELECT * FROM testOverviewLongTerm";
 	    }
+
+	    // STDEV = [ (sum over all people {(person score - mean) ^2} )/ (number of people -1)]^0.5
+	    // Calculate the mean and the user percentile
 	    foreach ($dbh->query($select) as $entry) {
 	    	$count++;
-	    	$sum += ($entry['performance'] - $performance);
+	    	$sum += $entry['performance'];
 	    	if ((int)$entry['performance'] < (int)$performance)
 	    	{
 	    		$better++;
 	    	}
 	    }
+	    $mean = $sum/$count;
+
+	    // Calculate the sum of (each person's score - mean )^2
+	    $stdev = 0;
+	    foreach ($dbh->query($select) as $entry) {
+	    	$stdev += (($entry['performance'] - $mean) * ($entry['performance'] - $mean));
+	    }
+
+	    // Calculate stdev
+	    $stdev = sqrt($stdev / ($count-1));
+	   
 	
 	    $level = (int)(100*$better/$count);
-	    $std = ($sum * $sum) / $count;
 	
-	    $score = 100 - (16 * $std);
+	    $score = 100 - (16 * (int)$stdev);
 	    $result = '{"score":'.$score.',"level":'.$level.'}';
 	   	echo $result;
 	}
