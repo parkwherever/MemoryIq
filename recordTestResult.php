@@ -128,23 +128,18 @@ require_once("./genMappingArray.php");
 	    	}
 	    }
 	    $mean = $sum/$count;
-
 	    // Calculate the sum of (each person's score - mean )^2
-	    $stdev = 0;
+	    $sumOfSquares = 0;
 	    foreach ($dbh->query($select) as $entry) {
-	    	$stdev += (($entry['performance'] - $mean) * ($entry['performance'] - $mean));
+	    	$sumOfSquares += (($entry['performance'] - $mean) * ($entry['performance'] - $mean));
 	    }
+	    
+	    $avgMinus1 = (floatval($sumOfSquares) / floatval($count-1));
+	    $stdev = sqrt($avgMinus1);
+	    $dif = floatval(($mean - $performance)/$stdev);
+	    $iq = 100 - 16*$dif;
 
-	    // Calculate stdev
-	    $stdev = sqrt(floatval($stdev) / floatval($count-1));
-	   
-	
-	    $level = (int)(100*$better/$count);
-	
-	    $score = 100 - (16 * (int)$stdev);
-	    $result = '{"score":'.$score.',"level":'.$level.'}';
+	    $result = '{"score":'.$iq.',"level":'.$level.',"totalTesters":'.$count'}';
 	   	echo $result;
 	}
-	
-  
 ?>
