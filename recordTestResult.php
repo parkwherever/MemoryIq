@@ -136,7 +136,7 @@ require_once("./genMappingArray.php");
 	    }
 
 	    // Calculate stdev
-	    $stdev = sqrt($stdev / ($count-1));
+	    $stdev = sqrt(floatval($stdev) / floatval($count-1));
 	   
 	
 	    $level = (int)(100*$better/$count);

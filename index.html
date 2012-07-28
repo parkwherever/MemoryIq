@@ -23,12 +23,12 @@ $(document).ready(function(){
 	// $(".testPanel").show();
 	
 	// Call the function to get 
-	// loadInfo("scripts/test.json")
+	loadInfo("scripts/test.json")
 	//End DEV
 
 	listNum = Math.ceil(Math.random()*5)
 	testDay = 1;
-	loadInfo("finalLists/list"+listNum+".json")
+	// loadInfo("finalLists/list"+listNum+".json")
 	/************* Helper Function ****************/
 	// Function to get full path of images
 
@@ -146,7 +146,7 @@ var shuffle = function(o){ //v1.0
 						Good with names and faces?
 					</h1>
 					<h2>a
-						A study to investigate face-name memory IQ
+						Test your face-name memory
 					</h2>
 					<div class="startItemMain">
 						<div class="startItemInner">
@@ -191,8 +191,8 @@ experiment.
 								This is a short (10 minute) simple study of face name memory.
 							</p>
 							<p>
-								At the end you will receive an estimate of a type of <i>Memory Face-
-Name IQ</i>, which reflects how well you did compared to everyone
+								At the end you will receive an estimate of a type of <i>Face-
+Name Memory IQ</i>, which reflects how well you did compared to everyone
 else who has completed the study.
 							</p>
 							<p>
@@ -265,10 +265,10 @@ term Face-Name Memory IQ</i>
 								A picture of a face will appear in the center of the screen paired with its corresponding name, as shown in the diagram.
 							</p>
 							<p>
-								You will be given 2 seconds to learn the face-name pairing before the next face-name pair for a total of 56 individuals.
+								You will be given 2 seconds to learn each of the 56 face-name pairs.
 							</p>
 							<p> 
-								Your task is to learn the items so that you can identify the correct name for an individual when prompted with their face later in the experiment.
+								Your task is to learn the items so that you can later recognize the face-name pair.
 							</p>
 							
 						</div>
@@ -380,8 +380,8 @@ proceeding onto the last portion of the study, please complete the following:
 								In the following section you will be presented with face name pairs in the center of the screen, one at a time. You will make one of two judgments about the face-name pairs.
 							</p>
 							<ul>
-								<li><a>a) <b>Old</b>: It is an old face-name pair that you studied.</a></li>
-								<li><a>a) <b>New</b>: it is a totally new face and name.</a></li>
+								<li><a>a) <b>Old</b>: An old face-name pair that you studied earlier.</a></li>
+								<li><a>b) <b>New</b>: A totally new face-name pair.</a></li>
 							</ul>
 							<p>When you are ready to begin the test phase, please press the begin button.</p>
 							<p>Note: you must answer each question within 10 seconds.</p>
@@ -406,16 +406,16 @@ proceeding onto the last portion of the study, please complete the following:
 						<div class="startItemInner">
 							<h2>Your immediate memory IQ score: <red id="score"></red></h2>
 							<p>
-								<red id="level"></red>% of the people taking this task have performed at the same level or lower than you did.
+								<red id="level"></red>% of the <red id="numberOfTesters"></red>% people that have so far completed this task have performed at the same level or lower than you did.
 							</p>
 							<p>
-								You correctly identified <red id="rightId"></red>% of items that were studied during the study phase, and correctly rejected <red id="wrongRej"></red>% of the new face-name pairs.
+								You correctly identified <red id="rightId"></red>% of items that were studied.
 							</p>
 							<p> 
-								<u>Note:</u> your face-name memory IQ score is based on the scores of people who have completed this task thus far. This memory IQ score is one of many types of measures of memory and face-name processing.
+								<u>Note:</u> your face-name memory IQ score is based on the scores of people who have completed this task thus far. This memory IQ score is only one measure of face-name memory and is only an approximation of this type.
 							</p>
 							<p id="askForEmail">
-								If you would like to know your long-term face-name memory IQ score, click on the right button below to participate in the final portion of this study tomorrow. A link will be sent to you, which again is totally voluntary.
+								If you would like to know your possibly more important long-term face-name memory IQ score, click on the right button below to participate in the final portion of this study tomorrow. A link will be sent to you, which again is totally voluntary.
 							</p>
 							
 						</div>
