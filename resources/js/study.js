@@ -290,6 +290,7 @@ showScore = function(){
         window.console.log(result);
         $("#score").html(Math.floor(result.score))
         $("#level").html(Math.floor(result.level))
+        $("#numberOfTesters").html(Math.floor(result.totalTesters))
       }
     });
   }
@@ -327,6 +328,28 @@ showScore = function(){
         // Set the user id as a global variable
         result = jQuery.parseJSON( useridobj );
         userid = result.userid
+      }
+    });
+  }
+
+  // Record Email Address
+  // Sends demographic info and returns a userId to keep track of user for the remainder of the test
+  sendEmailInfo = function(){
+    var email = $("#emailField").val()
+    var info = {
+      email:email,
+      userid:userid,
+      testNumber: getListNum()
+    }
+    $.ajax({
+      type: "GET",
+      contentType: "application/json; charset=utf-8",
+      url: "recordEmail.php",
+      data: "data='"+JSON.stringify(info) + "'",
+      // dataType: "json",
+      success:function(useridobj)
+      {
+        console.log("email recorded successfully")
       }
     });
   }

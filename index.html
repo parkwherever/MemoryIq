@@ -14,21 +14,19 @@ $(document).ready(function(){
 	$("#testPanel").hide();
 
 	//DEV
-	 // $(".startItem:last").prev().show()
-	 // $("#demoPage").show()
-	 // $("#testPhase").show()
-	 
-	 // $(".photoPair").show();
-	
+	// $(".startItem:last").prev().show()
+	// $("#demoPage").show()
+	// $("#testPhase").show()
+	// $(".photoPair").show();
 	// $(".testPanel").show();
 	
 	// Call the function to get 
-	loadInfo("scripts/test.json")
+	// loadInfo("scripts/test.json")
 	//End DEV
 
 	listNum = Math.ceil(Math.random()*5)
 	testDay = 1;
-	// loadInfo("finalLists/list"+listNum+".json")
+	loadInfo("finalLists/list"+listNum+".json")
 	/************* Helper Function ****************/
 	// Function to get full path of images
 
@@ -82,6 +80,7 @@ $(document).ready(function(){
 		})
 	})
 	$("#submitEmail").click(function(){
+		sendEmailInfo()
 		$(this).parent().parent().parent().hide()
 		$(this).parent().parent().parent().next().fadeIn(300)
 	})
@@ -406,7 +405,7 @@ proceeding onto the last portion of the study, please complete the following:
 						<div class="startItemInner">
 							<h2>Your immediate memory IQ score: <red id="score"></red></h2>
 							<p>
-								<red id="level"></red>% of the <red id="numberOfTesters"></red>% people that have so far completed this task have performed at the same level or lower than you did.
+								<red id="level"></red>% of the <red id="numberOfTesters"></red> people that have so far completed this task have performed at the same level or lower than you did.
 							</p>
 							<p>
 								You correctly identified <red id="rightId"></red>% of items that were studied.
