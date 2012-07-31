@@ -10,12 +10,13 @@ $(document).ready(function(){
 	//Init Setup
 	$(".startItem").hide();
 	$(".photoPairWrapper").hide();
-	$(".startItem:first").show();
+	// $(".startItem:first").show();
 	$("#testPanel").hide();
 
 	//DEV
 	// $(".startItem:last").prev().show()
 	// $("#demoPage").show()
+	$("#testResults").show()
 	// $("#testPhase").show()
 	// $(".photoPair").show();
 	// $(".testPanel").show();
@@ -89,6 +90,16 @@ $(document).ready(function(){
 		$("#askForEmail").hide()
 		$("#thanksPage").fadeOut(200,function(){
 			$("#testResults").fadeIn(400)
+		})
+	})
+	$("#goToResultsFromShare").click(function(){
+		$("#sharePage").fadeOut(200,function(){
+			$("#testResults").fadeIn(400)
+		})
+	})
+	$("#shareButton").click(function(){
+		$("#testResults").fadeOut(200,function(){
+			$("#sharePage").fadeIn(400)
 		})
 	})
 
@@ -422,7 +433,7 @@ proceeding onto the last portion of the study, please complete the following:
 						<div id="gotoEmail" class="startNextButton btnPair">
 							Participate in Second Part of Study
 						</div>
-						<div class="startNextButton btnPair">
+						<div id="shareButton" class="startNextButton btnPair">
 							Share Link with Friends
 						</div>
 					</div>
@@ -460,6 +471,7 @@ proceeding onto the last portion of the study, please complete the following:
 						</div>
 					</div>				
 				</div>
+				
 				<div id="thanksPage" class="startItem">
 					<h1>
 						Thanks For Your Participation!	
@@ -486,6 +498,34 @@ general memory performance.
 						</div>
 					</div>				
 				</div>
+				<!-- Share Page -->
+				<div id="sharePage" class="startItem">
+					<div class="startItemMain">
+						<div id="socialSharing">
+							<html xmlns:fb="http://www.facebook.com/2008/fbml">
+							  <body>
+							    <script src="http://connect.facebook.net/en_US/all.js"></script>
+							    <div id="fb-root"></div>
+							    <script>
+							      // assume we are already logged in
+							      FB.init({appId: '459065937457357', xfbml: true, cookie: true});
+
+							      FB.ui({
+							          method: 'send',
+							          name: 'Face-Name Memory IQ',
+							          link: 'http://experiments.wustl.edu/'
+							          });
+							     </script>
+							  </body>
+							</html>
+						</div>
+						
+						<div id="goToResultsFromShare" class="startNextButton ">
+							Back to Results Page
+						</div>
+					
+					</div>				
+				</div>
 			</div>
 			<!-- End Screens -->
 			<div class="photoPairWrapper">
@@ -505,6 +545,5 @@ general memory performance.
 		</div>
 	</div>
 </body>
-
 </html>
 	

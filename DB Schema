@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 25, 2012 at 12:34 AM
+-- Generation Time: Jul 29, 2012 at 11:08 PM
 -- Server version: 5.5.9
 -- PHP Version: 5.3.6
 
@@ -31,12 +31,7 @@ CREATE TABLE `demo` (
   `race` varchar(50) NOT NULL,
   `isLatino` varchar(5) NOT NULL,
   PRIMARY KEY (`uid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- Dumping data for table `demo`
---
-
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=81 ;
 
 -- --------------------------------------------------------
 
@@ -54,11 +49,21 @@ CREATE TABLE `detailTestLog` (
   `timeUntilAnswer` int(11) DEFAULT NULL,
   `testDay` tinyint(2) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=818 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1338 ;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `detailTestLog`
+-- Table structure for table `email`
 --
+
+CREATE TABLE `email` (
+  `userid` int(12) NOT NULL,
+  `email` varchar(40) NOT NULL,
+  `time` int(30) NOT NULL,
+  `testNumber` int(2) NOT NULL,
+  PRIMARY KEY (`userid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -78,11 +83,6 @@ CREATE TABLE `testOverviewLongTerm` (
   PRIMARY KEY (`uid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `testOverviewLongTerm`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -100,8 +100,3 @@ CREATE TABLE `testOverviewShortTerm` (
   `testNumber` int(11) NOT NULL,
   PRIMARY KEY (`uid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `testOverviewShortTerm`
---
-
