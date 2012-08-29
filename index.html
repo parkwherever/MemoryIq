@@ -434,7 +434,10 @@ proceeding onto the last portion of the study, please complete the following:
 							Participate in Second Part of Study
 						</div>
 						<div id="shareButton" class="startNextButton btnPair">
-							Share Link with Friends
+							<img src="http://www.socializeyourcause.org/images/likethumb1.png" title="Like Us On Facbeook!" width="200" height="50" border="0" /></a><br /><p style="float:right; padding-bottom:5px; font-size:10px;">
+						<div class="fb-like" style="float:left;" data-href="http://experiments.wustl.edu" data-send="true" data-width="200" data-show-faces="false">
+						</div>
+
 						</div>
 					</div>
 				</div>
@@ -499,33 +502,7 @@ general memory performance.
 					</div>				
 				</div>
 				<!-- Share Page -->
-				<div id="sharePage" class="startItem">
-					<div class="startItemMain">
-						<div id="socialSharing">
-							<html xmlns:fb="http://www.facebook.com/2008/fbml">
-							  <body>
-							    <script src="http://connect.facebook.net/en_US/all.js"></script>
-							    <div id="fb-root"></div>
-							    <script>
-							      // assume we are already logged in
-							      FB.init({appId: '459065937457357', xfbml: true, cookie: true});
-
-							      FB.ui({
-							          method: 'send',
-							          name: 'Face-Name Memory IQ',
-							          link: 'http://experiments.wustl.edu/'
-							          });
-							     </script>
-							  </body>
-							</html>
-						</div>
-						
-						<div id="goToResultsFromShare" class="startNextButton ">
-							Back to Results Page
-						</div>
-					
-					</div>				
-				</div>
+				
 			</div>
 			<!-- End Screens -->
 			<div class="photoPairWrapper">
@@ -541,9 +518,17 @@ general memory performance.
 				<div id="quizOld" class="quizBtn">Old</div>
 				<div id="quizNew"class="quizBtn">New</div>
 			</div>
-
 		</div>
 	</div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=459065937457357";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>
 	
