@@ -82,7 +82,7 @@ i{
 /*Intro Instructions*/
 #startContainer{
     height:500px;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .startItemMain{
     /*@extend .hor;*/
@@ -243,6 +243,11 @@ b{
 .wideBtn{
     width:300px;
 }
+.researchBtn{
+    width:220px;
+    height:43px;
+    font-size: 19px;
+}
 red{
     color:red;
 }
@@ -255,5 +260,15 @@ red{
 }
 .fb-send{
   transform: scale(2.5);
+}
+#shareButton
+{
+    width: 240px;
+    height: 41px;
+}
+#shareButton *
+{
+    position:relative;
+    left: -10px;
 }
 

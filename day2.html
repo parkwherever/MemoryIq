@@ -19,10 +19,11 @@ $(document).ready(function(){
 	//DEV
 	 // $(".startItem:last").show()
 	 // $(".photoPair").show();
+	 // $("#testResults").show()
 	
 	// $(".testPanel").show();
-	// loadInfo("scripts/test.json")
 	//DELETE DEV
+
 	// Call the function to get 
 	// loadInfo("scripts/test.json")
 	function getParameterByName(name)
@@ -45,6 +46,7 @@ $(document).ready(function(){
 	}
 
 	loadInfo("finalLists/list"+listNum+".json")
+	// loadInfo("scripts/test.json")
 	testDay = 2
 
 	// Expects url that looks like: /Psych/day2.html?ln=3&ud=51
@@ -103,7 +105,6 @@ $(document).ready(function(){
 	})
 	$("#goToResults").click(function(){
 		$("#gotoEmail").hide()
-		$("#share").show()
 		$("#thanksPage").fadeOut(200,function(){
 			$("#testResults").fadeIn(400)
 		})
@@ -198,12 +199,13 @@ var shuffle = function(o){ //v1.0
 						</div>
 					</div>
 					<div id="btnWrapper">
-						<div id="gotoEmail" class="wideBtn startNextButton">
+						<div id="gotoEmail" class="researchBtn startNextButton">
 							Interested in Participating in Future Research?
 						</div>
-						<div id="share"class="startNextButton btnPair">
-							Share Link with Friends
-						</div> 
+						<div id="shareButton" class="startNextButton btnPair">
+							<div class="fb-like" style="float:left;" data-href="http://experiments.wustl.edu" data-send="true" data-width="200" data-show-faces="false">
+							</div>
+						</div>
 					</div>
 				</div>
 				<div id="email" class="startItem">
@@ -283,6 +285,16 @@ general memory performance.
 
 		</div>
 	</div>
+	<div id="fb-root"></div>
+	<script>
+	(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=459065937457357";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	</script>
 </body>
 
 </html>

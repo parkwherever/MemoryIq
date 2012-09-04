@@ -4,30 +4,35 @@
 <LINK REL=StyleSheet HREF="ps/stylesheets/screen.css" TYPE="text/css" >
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="resources/js/study.js"></script>
+
+<!-- Facebook OG Tags -->
+<meta property="og:title" content="Washington University Face-Name Memory IQ Test" />  
+<meta property="og:description" content="Test your Face-Name Recognition and Memory IQ" /> 
+<meta property="og:image" content="http://www.experiments.wustl.edu/resources/im/start/people.png" />  
 <script type="text/javascript">
 $(document).ready(function(){
 	
 	//Init Setup
 	$(".startItem").hide();
 	$(".photoPairWrapper").hide();
-	// $(".startItem:first").show();
+	$(".startItem:first").show();
 	$("#testPanel").hide();
 
 	//DEV
 	// $(".startItem:last").prev().show()
 	// $("#demoPage").show()
-	$("#testResults").show()
+	// $("#testResults").show()
 	// $("#testPhase").show()
 	// $(".photoPair").show();
 	// $(".testPanel").show();
 	
 	// Call the function to get 
-	// loadInfo("scripts/test.json")
+	loadInfo("scripts/test.json")
 	//End DEV
 
 	listNum = Math.ceil(Math.random()*5)
 	testDay = 1;
-	loadInfo("finalLists/list"+listNum+".json")
+	// loadInfo("finalLists/list"+listNum+".json")
 	/************* Helper Function ****************/
 	// Function to get full path of images
 
@@ -92,19 +97,6 @@ $(document).ready(function(){
 			$("#testResults").fadeIn(400)
 		})
 	})
-	$("#goToResultsFromShare").click(function(){
-		$("#sharePage").fadeOut(200,function(){
-			$("#testResults").fadeIn(400)
-		})
-	})
-	$("#shareButton").click(function(){
-		$("#testResults").fadeOut(200,function(){
-			$("#sharePage").fadeIn(400)
-		})
-	})
-
-
-	
 });
 
 
@@ -115,29 +107,6 @@ var shuffle = function(o){ //v1.0
 	for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
 	return o;
 };
-
-
-
-
-
-// function Person (name, img) {
-//     this.pname = name;
-//     this.img = imgFullPath(img);
-//     // this.getInfo = getAppleInfo;
-// }
-// //Get Info Method
-// Person.prototype.getInfo = function() {
-//     return this.pname + ' ' + this.img;
-// };
-// // Function to get full path of images
-// var imgFullPath = function(img){
-// 	var path = 'resources/im/'
-// 	return path+img
-// }
-
-// var p1 = new Person('Colin','colin-farrell.jpg')
-// console.log(p1.getInfo())
-
 
 </script>
 </head>
@@ -434,10 +403,8 @@ proceeding onto the last portion of the study, please complete the following:
 							Participate in Second Part of Study
 						</div>
 						<div id="shareButton" class="startNextButton btnPair">
-							<img src="http://www.socializeyourcause.org/images/likethumb1.png" title="Like Us On Facbeook!" width="200" height="50" border="0" /></a><br /><p style="float:right; padding-bottom:5px; font-size:10px;">
-						<div class="fb-like" style="float:left;" data-href="http://experiments.wustl.edu" data-send="true" data-width="200" data-show-faces="false">
-						</div>
-
+							<div class="fb-like" style="float:left;" data-href="http://experiments.wustl.edu" data-send="true" data-width="200" data-show-faces="false">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -520,15 +487,16 @@ general memory performance.
 			</div>
 		</div>
 	</div>
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=459065937457357";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+	<div id="fb-root"></div>
+	<script>
+	(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=459065937457357";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	</script>
 </body>
 </html>
 	
